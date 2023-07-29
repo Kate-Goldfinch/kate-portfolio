@@ -5,7 +5,7 @@ import Projects from './Projects';
 
 const projectDetails = [
   {title:'Skill Visualiser',
-description: "A data visualization application built with a team as part of my internship at Faethm. Transformed an existing prototype into a production-ready application utilising the client's existing tech stack, which included ReactJS (using TypeScript).",
+description: "A data visualization application built with a team as part of my internship at Faethm AI. Transformed an existing prototype into a production-ready application utilising the client's existing tech stack, which included ReactJS (using TypeScript).",
 skills: ['Javascript', 'React', 'TypeScript', 'D3.js'],
 image: new URL('../assets/skillsvisCover.JPG', import.meta.url).href,
 imagePath: '../assets/SkillVis'

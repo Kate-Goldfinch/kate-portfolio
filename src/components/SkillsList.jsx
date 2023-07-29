@@ -5,72 +5,92 @@ import styled from 'styled-components';
 
 const SkillsList = () => {
 
-    const SkillsContainer = styled.div`
+    const Container = styled.div`
 `;
+    const SkillsContainer = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: max(300px, 60%);
+`;
+
+const SkillsItem = styled.div`
+display:flex;
+flex-wrap: wrap;
+flex-direction: column;
+
+> img{
+    height: 65px;
+}
+`;
+const SkillsName = styled.h5`
+text-align: center;
+`;
+
   return (
-    <SkillsContainer id='skills'>
+    <Container>
     <h3 style={{'font-size':'48px'}}>Skills & Tools</h3>
     <IconContext.Provider value={{ size: "65px"}}>
-    <div className='skills-container'>
-        <div className='skill-item'>
+    <SkillsContainer>
+        <SkillsItem>
             <SiHtml5/>
-            <h5>HTML5</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>HTML5</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiCss3/>
-            <h5>CSS3</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>CSS3</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiJavascript/>
-            <h5>Javascript</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Javascript</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiReact/>
-            <h5>React</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>React</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiTypescript/>
-            <h5>Typescript</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Typescript</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiJquery/>
-            <h5>jQuery</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>jQuery</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <img src={d3js}/>
-            <h5>D3.js</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>D3.js</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiGit/>
-            <h5>Git</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Git</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiGithub/>
-            <h5>Github</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Github</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiBootstrap/>
-            <h5>Bootstrap</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Bootstrap</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiNodedotjs/>
-            <h5>Node.js</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Node.js</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiMongodb/>
-            <h5>MongoDB</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>MongoDB</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiPython/>
-            <h5>Python</h5>
-        </div>
-        <div className='skill-item'>
+            <SkillsName>Python</SkillsName>
+        </SkillsItem>
+        <SkillsItem>
             <SiAdobe/>
-            <h5>Adobe Suite</h5>
-        </div>
-       </div>
+            <SkillsName>Adobe Suite</SkillsName>
+        </SkillsItem>
+       </SkillsContainer>
        </IconContext.Provider>
-    </SkillsContainer>
+    </Container>
   )
 }
 

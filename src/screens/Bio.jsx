@@ -7,7 +7,7 @@ const Bio = () => {
     const BioContainer = styled.div`
     padding-top: 30px;
     margin:0 auto;
-    width: 50%
+    width: 60%
   `;
 
   const Text = styled.p`

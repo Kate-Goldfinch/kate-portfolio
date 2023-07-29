@@ -10,11 +10,11 @@ const CardContainer = styled.div`
   margin:0 auto;
   row-gap: 48px;
   margin-top: 5%;
-  width: 50%;
+  width: 60%;
 `;
 
 const Header = styled.h3`
-font-size: 48px;
+font-size: 56px;
 `;
 
   return (

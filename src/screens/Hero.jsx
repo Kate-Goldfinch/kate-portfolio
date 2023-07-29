@@ -5,18 +5,17 @@ const Hero = () => {
     const HeroContainer = styled.div`
     background-color: steelblue;
     height: 99vh;
-    padding-left: 150px;
   `;
 
   const TitleContainer = styled.div`
   position: relative;
-  top: 40%;
+  top: min(20%, 800px);
   padding: 30px;
-
+  padding-left: min(15%,100px);
 `;
 
   const PreHeader = styled.p`
-  font-size:2rem;
+  font-size: min(2rem, 10vw);
   color: lightblue;
   margin:0;
   `
@@ -24,15 +23,14 @@ const Hero = () => {
   const Header = styled.h1`
   margin:0;
   line-height: 100%;
-  height: 80px;
-  font-size:5rem;
+  font-size:min(5rem, 15vw);
   color: white;
   `
 
   const HeroText = styled.p`
   font-size:1.5rem;
   color: lightblue;
-  width: 800px;
+  width: 60%;
   `
 
   const Button = styled.button`

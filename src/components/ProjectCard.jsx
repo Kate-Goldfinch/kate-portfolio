@@ -9,16 +9,22 @@ const ProjectCard = ({project:{title, description, skills, image}, project}) => 
 
   const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 1fr;
   justify-content: space-between;
-  height: 400px;
   gap: 48px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+ }
 
   > img{
 
     align-self:center;
     height: 380px;
-    width: 500px;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
     border-radius: 8px;
   }
 `;
@@ -35,12 +41,12 @@ const SkillsContainer = styled.div`
   margin-top: 10px;
   display:flex;
   gap:8px;
-  width: 70%;
+  width: 85%;
   flex-wrap: wrap;
 `;
 
 const Header = styled.h4`
-  font-size: 4rem;
+  font-size: 3.5rem;
   letter-spacing: 0px;
   font-weight: 500;
   margin: 0;
