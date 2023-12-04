@@ -1,37 +1,42 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import Links from "../components/Links";
+import wave from '../assets/layered-waves-haikei.svg'
 
 const Hero = () => {
-
-    const HeroContainer = styled.div`
-    background-color: steelblue;
-    height: 99vh;
+  const HeroContainer = styled.div`
+    height: 100vh;
+    aspect-ratio: 900/600;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   `;
 
   const TitleContainer = styled.div`
-  position: relative;
-  top: min(20%, 800px);
-  padding: 30px;
-  padding-left: min(15%,100px);
-`;
+    position: relative;
+    top: min(20%, 800px);
+    padding: 30px;
+    padding-left: min(15%, 100px);
+  `;
 
   const PreHeader = styled.p`
-  font-size: min(2rem, 10vw);
-  color: lightblue;
-  margin:0;
-  `
+    font-size: min(2rem, 10vw);
+    color: lightblue;
+    margin: 0;
+  `;
 
   const Header = styled.h1`
-  margin:0;
-  line-height: 100%;
-  font-size:min(5rem, 15vw);
-  color: white;
-  `
+    margin: 0;
+    line-height: 100%;
+    font-size: min(5rem, 15vw);
+    color: white;
+  `;
 
   const HeroText = styled.p`
-  font-size:1.5rem;
-  color: lightblue;
-  width: 60%;
-  `
+    font-size: 1.5rem;
+    color: lightblue;
+    width: 60%;
+  `;
 
   const Button = styled.button`
   background-color: #FFFFFF;
@@ -68,18 +73,22 @@ const Hero = () => {
   border-color: #000000;
   transform: scale(.96);
 }
-`
+`;
 
   return (
-    <HeroContainer>
-        <TitleContainer>
+    <HeroContainer style={{backgroundImage: `url(${wave})`}} id="home">
+      <TitleContainer>
         <PreHeader>Hi, my name is </PreHeader>
         <Header>Kate Goldfinch</Header>
-        <HeroText>I'm a <strong>Front End Developer</strong> who loves making stuff on the web</HeroText>
-        </TitleContainer>
-        {/* <Button>See My Projects</Button> */}
+        <HeroText>
+          I'm a <strong>Front End Developer</strong> who loves making stuff on
+          the web
+        </HeroText>
+        <Links/>
+      </TitleContainer>
+      {/* <Button>See My Projects</Button> */}
     </HeroContainer>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

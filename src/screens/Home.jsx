@@ -14,19 +14,24 @@ imagePath: '../assets/SkillVis'
 description: 'An e-commerce site powered by a custom built management interface designed to allow boutique retailers to control their online offerings. Incorporates Auth0 for user authentication and Stripe API to facility transactions. ',
 skills: ['Javascript', 'React', 'Express', 'MongoDB', 'Stripe API','Auth0', 'BootStrap'],
 image: new URL('../assets/OneStopCover.JPG', import.meta.url).href,
-imagePath: '../assets/OneStop'
+imagePath: '../assets/OneStop',
+github_url: 'https://github.com/Kate-Goldfinch/1Stop_Major_Work'
 },
 {title:'KatChat',
 description: 'A real-time group chat application built using an Express web server and a React front end.',
 skills: ['Javascript', 'React', 'Express', 'MongoDB'],
 image: new URL('../assets/katchatCover.JPG', import.meta.url).href,
-imagePath: '../assets/KatChat'
+imagePath: '../assets/KatChat',
+github_url: 'https://github.com/Kate-Goldfinch/KatChatApp',
+deployment_url: 'https://katchatapp.onrender.com/'
 }
 ]
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 0;
 `;
 
 

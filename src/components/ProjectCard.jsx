@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom'
 import SkillTags from './SkillTags';
 
-const ProjectCard = ({project:{title, description, skills, image}, project}) => {
+const ProjectCard = ({project}) => {
   const navigate = useNavigate();
 
   const Container = styled.div`
@@ -103,19 +103,17 @@ const Button = styled.button`
   }
 `
   return (
-  <>
-<Container>
-  <TextContainer>
-      <Header>{title}</Header>
-      <SkillsContainer>
-        <SkillTags skills={skills}/>
-      </SkillsContainer>
-      <Text>{description}</Text>
-      <Button onClick = {() => navigate(`/${title}`, { state: project })}>View Project</Button>
-  </TextContainer>
-  <img src={image}/>
-</Container>
-</>
+  <Container>
+    <TextContainer>
+        <Header>{project.title}</Header>
+        <SkillsContainer>
+          <SkillTags skills={project.skills}/>
+        </SkillsContainer>
+        <Text>{project.description}</Text>
+        <Button onClick = {() => navigate(`/${project.title}`, { state: project })}>View Project</Button>
+    </TextContainer>
+    <img src={project.image}/>
+  </Container>
   )
 }
 

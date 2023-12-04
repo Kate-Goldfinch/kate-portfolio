@@ -12,6 +12,7 @@ const Tag = styled.p`
 `;
   return (
     <>
+    {console.log(skills)}
     {skills.map((skill) =>{
         return <Tag key={skill}>{skill}</Tag>
         
